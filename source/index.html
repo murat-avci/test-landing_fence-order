@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Тестовое задание заказ забора компании «Лидер поиска»</title>
+</head>
+<body class="page__body">
+  <section class="order">
+    <h2 class="visually-hidden">форма заказа</h2>
+    <form action="#" method="post" class="order__form">
+      <fieldset class="order__field">
+        <legend class="order__title">Заказать забор</legend>
+        <div class="order__inner-wrapper">
+          <label class="order__label" for="length">Длина забора</label>
+          <div class="order__input-wrap">
+            <input class="order__input" type="number" id="length" name="length" placeholder="0">
+            <span class="order__unit">метров</span>
+          </div>
+        </div>
+        <div class="order__inner-wrapper">
+          <label class="order__label" for="heigth">Высота забора</label>
+          <div class="order__input-wrap">
+            <input class="order__input" type="number" id="heigth" name="heigth" placeholder="0">
+            <span class="order__unit">метров</span>
+          </div>
+        </div>
+        <div class="order__inner-wrapper">
+          <label class="order__label" for="heigth">Материал забора</label>
+          <div class="order__input-wrap">
+            <select class="order__select">
+              <option value="1" selected>Профнастил 400 Р за м²</option>
+              <option value="2">Модули 500 Р за м²</option>
+              <option value="3">Бетон 700 Р за м²</option>
+              <option value="3">Сетка 200 Р за м²</option>
+            </select>
+          </div>
+        </div>
+        <div class="order__inner-wrapper">
+          <input class="order__input" type="checkbox" id="install" name="install">
+          <label class="order__label" for="install">Нужен монтаж</label>
+        </div>
+        <div class="order__inner-wrapper">
+          <label class="order__label" for="amount">Сумма заказа:</label>
+          <input class="order__input" type="number" id="amount" name="amount" placeholder="0 &#x20bd;" readonly>
+        </div>
+      </fieldset>
+      <button type="submit" class="order__button">ДАЛЕЕ</button>
+    </form>
+  </section>
+  <section class="user">
+    <h2 class="visually-hidden">Информации клиента</h2>
+    <form class="customer__form" action="#" method="post">
+      <fieldset class="user__field">
+        <legend class="user_title">Пожалуйста, представьтесь</legend>
+        <div class="user__inner-wrapper">
+          <label class="user__label" for="user-name">Ваше имя</label>
+          <input type="text" id="user-name" name="user-name" class="user__name" placeholder="Татьяна">
+        </div>
+        <div class="user__inner-wrapper">
+          <label class="user__label" for="user-email">Электронная почта</label>
+          <input type="email" id="user-email" name="user-email" class="user__email" placeholder="mail@mail.ru">
+        </div>
+        <div class="user__inner-wrapper">
+          <label class="user__label" for="user-email">Телефон</label>
+          <input type="tel" id="user-tel" name="user-tel" class="user__tel" placeholder="+7 (917) 111 - 22 - 33">
+        </div>
+        <!-- <div class="user__result">
+          <p class="user__text">Вы укомплектовали забор</p>
+          <p class="user__text">длинной <input class="user__input" type="number" id="user-length" name="user-length" placeholder="6" readonly> метров</p>
+          <p class="user__text">и высотой<input type="number" class="user__input" id="user-heigth" name="user-height" placeholder="2" readonly> метров</p>
+          <p class="user__text">из материала <input type="text" class="user__material" id="user-material" name="user-material" placeholder="профнастил" readonly></p>
+          <p class="user__text">на сумму <input type="number" id="user-amount" name="user-amount" class="user__amount" placeholder="8400 &#x20bd;" readonly> </p>
+        </div> -->
+      </fieldset>
+      <button type="submit" class="customer__button">отправить</button>
+    </form>
+  </section>
+  <section class="popup">
+    <h2 class="visually-hidden">попап успешной отправки</h2>
+    <p class="popup__message">Татьяна, заказ № 8675 сформирован!</p>
+    <div class="popup__info">
+      <p class="popup__info">
+        Мы повторили его комплектацию
+        на почту <input type="email" id="popup-email" name="popup-email" class="popup__email" placeholder="mail@mail.ru" readonly>
+      </p>
+        <p class="popup__info">
+          В ближайшее время наш специалист свяжется с вами по телефону
+          <input type="tel" id="popup-tel" name="popup-tel" class="popup__tel" placeholder="+7 (917) 111-22-33" readonly>
+        </p>
+    </div>
+  </section>
+</body>
+</html>
